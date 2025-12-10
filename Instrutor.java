@@ -8,5 +8,5 @@ public class Instrutor extends Pessoa implements Registravel{
     public void registrar(){
         System.out.println("Instrutor registrado:" + nome);
     }
-    ####### aiaiaiaiai
+    
 }
