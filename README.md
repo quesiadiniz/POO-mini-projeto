@@ -1,5 +1,5 @@
-# Programação Orientada a Objetos
+# Sistema de Academia 🏋🏻‍♀️
 
-Mini-projeto de Sistema de Academia.
+Mini-Projeto para a disciplina - Progremação Orientada a Objetos
 
 Alunas: Quesia Diniz e Letícia Firmino.
