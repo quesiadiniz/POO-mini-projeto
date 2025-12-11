@@ -1,10 +1,11 @@
 public class Aluno extends Pessoa {
-    int matricula;
-    // private String objetivo; //perder peso, ganhar massa, saúde etc...
+    public int matricula;
+    private String objetivo; //perder peso, ganhar massa, saúde etc...
     
-    public Aluno(String nome, char sexo, int idade, int matricula){
+    public Aluno(String nome, char sexo, int idade, int matricula, String objetivo){
         super(nome, sexo, idade);
         this.matricula=matricula;
+        this.objetivo=objetivo;
         validarDados();
     }
 
@@ -19,7 +20,7 @@ public class Aluno extends Pessoa {
         return matricula;
     }
 
-    public void objetivoPessoal(String objetivo){
+    public void objetivoPessoal(){
         if (objetivo.isEmpty()){
             System.out.println("não há objetivo especifico");
         }
