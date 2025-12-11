@@ -7,6 +7,7 @@ abstract class Pessoa{
         this.nome = nome;
         this.sexo = sexo;
         this.idade = idade;
+        validarDados();
     }
 
     public String getNome(){
@@ -15,6 +16,24 @@ abstract class Pessoa{
 
     public int getIdade(){
         return idade;
+    }
+
+    public char getSexo(){
+        return sexo;
+    }
+
+    public void validarDados(){
+        if (idade<=0){
+            throw new IllegalArgumentException("idade inválida!");
+        }
+        if (nome.isEmpty()){
+            throw new IllegalArgumentException("nome inválido!");
+        }
+    }
+
+    @Override
+    public String toString(){
+        return "**Cadastro Academia** \nNome: " + nome + "\nIdade: " + idade + "\nSexo: " + sexo;
     }
 
 
