@@ -1,4 +1,4 @@
-public class AvaliacaoFisica {
+public class AvaliacaoFisica implements Registravel {
     private double peso;
     private double altura;
     
@@ -21,6 +21,11 @@ public class AvaliacaoFisica {
 
     public double calcularIMC() {
         return peso / (altura * altura);
+    }
+
+    @Override
+    public void registrar() {
+        System.out.println("Avaliação física registrada com sucesso!");
     }
 
     @Override
