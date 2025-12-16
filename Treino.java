@@ -6,6 +6,9 @@ public class Treino implements Registravel{
 
     public Treino(String nomeTreino, List<Exercicio> exercicios){
         this.nomeTreino = nomeTreino;
+        if (exercicios == null) {
+            throw new IllegalArgumentException("Lista de exercícios inválida!");
+        }
         this.exercicios = exercicios;
     }
 
@@ -24,8 +27,10 @@ public class Treino implements Registravel{
         }
     }
 
-    public void treinoCompleto(){
-        System.out.println(exercicios);
+    public void treinoCompleto() {
+    for (Exercicio e : exercicios) {
+        System.out.println(e);
+        }
     }
 
     @Override

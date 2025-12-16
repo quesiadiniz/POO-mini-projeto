@@ -9,9 +9,13 @@ public class Instrutor extends Pessoa {
     }
 
     @Override
-    public void validarDados(){
-        if (especialidade == null || especialidade.isEmpty()){
-            throw new IllegalArgumentException("O instrutor precisa sinalizar uma especialidade!");
+    public void validarDados() {
+        super.validarDados(); // valida nome, idade e sexo
+
+        if (especialidade == null || especialidade.isEmpty()) {
+            throw new IllegalArgumentException(
+                "O instrutor precisa sinalizar uma especialidade!"
+            );
         }
     }
 
@@ -19,6 +23,5 @@ public class Instrutor extends Pessoa {
     public String toString(){
         return ">>> Academia Let&Qsia <<< \n| Instrutor (a): " + getNome() + "\n| Idade: " + getIdade() + "\n| Sexo: " + getSexo() + "\n| Especialidade " + especialidade;
     }
-
 
 }

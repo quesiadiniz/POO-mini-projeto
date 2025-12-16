@@ -11,15 +11,17 @@ public class Exercicio {
     }
 
     private void validarExercicio(){
-        if (nome.isEmpty() || nome.isBlank()){
+        if (nome == null|| nome.isBlank()){
             throw new IllegalArgumentException("Exercício inexistente"); 
         }
         if (series<=0 || repeticoes<=0){
-            throw new NullPointerException("è necessario ao menos 1 seria/repeticao!");
+            throw new IllegalArgumentException("É necessário ao menos 1 série e 1 repetição!");
         }
     }
 
-
-
+    @Override
+    public String toString() {
+        return nome + " - " + series + "de " + repeticoes;
+    }
     
 }

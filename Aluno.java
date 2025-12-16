@@ -1,5 +1,5 @@
 public class Aluno extends Pessoa {
-    public int matricula;
+    private int matricula;
     private String objetivo; //perder peso, ganhar massa, saúde etc...
     
     public Aluno(String nome, char sexo, int idade, int matricula, String objetivo){
@@ -10,9 +10,15 @@ public class Aluno extends Pessoa {
     }
 
     @Override
-    public void validarDados(){
-        if (nome.isEmpty()){
-            throw new IllegalArgumentException("Nome inválido");
+    public void validarDados() {
+        super.validarDados(); 
+
+        if (matricula <= 0) {
+            throw new IllegalArgumentException("Matrícula inválida");
+        }
+
+        if (objetivo == null) {
+            objetivo = "";
         }
     }
 
@@ -34,6 +40,5 @@ public class Aluno extends Pessoa {
     public String toString(){
         return ">>> Academia Let&Qsia <<< \n| Aluno (a): " + getNome() + "\n| Idade: " + getIdade() + "\n| Sexo: " + getSexo() + "\n| Matricula numero: " + matricula;
     }
-
 
 }
