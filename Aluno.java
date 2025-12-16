@@ -9,6 +9,13 @@ public class Aluno extends Pessoa {
         validarDados();
     }
 
+        // sobrecarga no construtor
+    public Aluno(String nome, int idade, int matricula){
+        super(nome, 'N', idade);
+        this matricula = matricula;
+        validarDados();
+    }
+
     @Override
     public void validarDados() {
         super.validarDados(); 
