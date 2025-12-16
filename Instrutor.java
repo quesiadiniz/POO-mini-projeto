@@ -8,6 +8,14 @@ public class Instrutor extends Pessoa {
         validarDados();
     }
 
+    //sobrecarga construtor
+    public Instrutor(String nome, int idade, String especialidade){
+        super(nome, 'N', idade);
+        this.especialidade=especialidade;
+        validarDados();
+    }
+
+
     @Override
     public void validarDados() {
         super.validarDados(); // valida nome, idade e sexo
